@@ -2103,6 +2103,7 @@ body {
   .overview-grid {
     grid-template-columns: 1fr;
     gap: 15px;
+  }
   
   .dashboard-header {
     padding: 15px 20px;
@@ -2123,7 +2124,6 @@ body {
     padding: 20px;
     width: calc(100% - 40px);
     max-width: calc(100% - 40px);
-  }
   }
 
   .orders-grid {
@@ -2167,11 +2167,12 @@ body {
 @media (max-width: 1200px) {
   .overview-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-    justify-content: space-between;
-  }
-  
-  .search-input {
     width: 150px;
+}
+
+@media (max-width: 600px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
   }
 }
