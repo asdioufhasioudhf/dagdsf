@@ -57,7 +57,7 @@ function showPage(page) {
 }
 
 function loadPageContent(page) {
-  const contentArea = document.getElementById("content-area")
+  const contentArea = document.getElementById("dashboard-content")
   const pageTitle = document.getElementById("page-title")
 
   switch (page) {
