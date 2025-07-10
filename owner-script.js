@@ -6,7 +6,7 @@ function handleLogin(event) {
   const password = document.getElementById("password").value
 
   // Simple demo authentication (replace with real authentication)
-  if (username === "admin" && password === "admin123") {
+  if (username === "admin" && password === "admin") {
     // Store login status
     localStorage.setItem("ownerLoggedIn", "true")
     localStorage.setItem("ownerUsername", username)
