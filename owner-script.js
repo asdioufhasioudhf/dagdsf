@@ -58,22 +58,27 @@ function showPage(page) {
 
 function loadPageContent(page) {
   const contentArea = document.getElementById("content-area")
+  const pageTitle = document.getElementById("page-title")
 
   switch (page) {
     case "overview":
+      pageTitle.textContent = "Dashboard Overview"
       contentArea.innerHTML = getOverviewContent()
       break
     case "orders":
+      pageTitle.textContent = "Order Management"
       contentArea.innerHTML = getOrdersContent()
       initializeOrdersPage()
       break
     case "expense":
+      pageTitle.textContent = "Expense Management"
       contentArea.innerHTML = getExpenseContent()
       break
     case "checkout":
       window.location.href = "checkout-page.html"
       break
     default:
+      pageTitle.textContent = "Dashboard Overview"
       contentArea.innerHTML = getOverviewContent()
   }
 }
@@ -119,7 +124,8 @@ const cashRegister = {
 // Content templates
 function getOverviewContent() {
   return `
-        <div class="overview-grid">
+        <div class="dashboard-stats">
+            <div class="overview-grid">
             <div class="stat-card sales-card">
                 <div class="stat-icon">💰</div>
                 <div class="stat-info">
@@ -181,6 +187,7 @@ function getOverviewContent() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         
         <div class="recent-orders">
