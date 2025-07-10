@@ -244,6 +244,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: calc(100vw - 280px);
+  max-width: calc(100vw - 280px);
+  overflow-x: hidden;
 }
 
 .dashboard-header {
@@ -311,14 +314,10 @@ body {
 .content-area {
   flex: 1;
   padding: 30px;
-  width: 100%;
-  max-width: 100%;
+  width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
   overflow-y: auto;
-}
-
-/* Dashboard Stats Container */
-.dashboard-stats {
-  margin-bottom: 30px;
+  overflow-x: hidden;
 }
 
 /* Enhanced Overview Grid */
@@ -326,7 +325,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+  margin-bottom: 40px;
   width: 100%;
+  max-width: 100%;
 }
 
 .stat-card {
@@ -444,7 +445,8 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin-top: 20px;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .recent-orders h2 {
@@ -2074,6 +2076,11 @@ body {
     width: 100%;
     height: auto;
   }
+  
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+  }
 
   .sidebar-menu {
     display: flex;
@@ -2096,6 +2103,27 @@ body {
   .overview-grid {
     grid-template-columns: 1fr;
     gap: 15px;
+  
+  .dashboard-header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-input {
+    width: 150px;
+  }
+  
+  .content-area {
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+  }
   }
 
   .orders-grid {
@@ -2140,29 +2168,6 @@ body {
   .overview-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .main-content {
-    padding: 20px;
-  }
-  
-  .content-area {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .overview-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .dashboard-header {
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .header-actions {
-    width: 100%;
     justify-content: space-between;
   }
   

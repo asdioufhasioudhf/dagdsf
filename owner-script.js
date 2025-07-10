@@ -124,8 +124,7 @@ const cashRegister = {
 // Content templates
 function getOverviewContent() {
   return `
-        <div class="dashboard-stats">
-            <div class="overview-grid">
+        <div class="overview-grid">
             <div class="stat-card sales-card">
                 <div class="stat-icon">💰</div>
                 <div class="stat-info">
@@ -187,7 +186,6 @@ function getOverviewContent() {
                     </div>
                 </div>
             </div>
-        </div>
         </div>
         
         <div class="recent-orders">
